@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Sourav Sarkar | Frontend Developer</title>
+    <link
+      rel="icon"
+      href="./assets/sourav_sarkar_profile_picture.jpg"
+      type="image/jpeg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #34d399, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+      .tech-icon:hover {
+        transform: scale(1.1);
+      }
+      /*New*/
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .slider-container:hover .slider-track {
+        animation-play-state: paused;
+      }
+
+      .slider-track {
+        display: flex;
+        animation: slide 20s linear infinite;
+      }
+
+      .slider-container {
+        overflow: hidden;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-800/80 backdrop-blur-sm z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold gradient-text">SOURAV SARKAR</h1>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#projects" class="hover:text-emerald-400 transition"
+            >Projects</a
+          >
+          <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+          <a href="#contact" class="hover:text-emerald-400 transition"
+            >Contact</a
+          >
+          <a href="education.html" class="hover:text-emerald-400 transition"
+            >Education</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-emerald-400 hover:text-emerald-300 focus:outline-none"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden mt-4 space-y-4 bg-slate-800 rounded-lg p-4"
+      >
+        <a href="#projects" class="block hover:text-emerald-400 transition"
+          >Projects</a
+        >
+        <a href="#skills" class="block hover:text-emerald-400 transition"
+          >Skills</a
+        >
+        <a href="#contact" class="block hover:text-emerald-400 transition"
+          >Contact</a
+        >
+        <a href="education.html" class="block hover:text-emerald-400 transition"
+          >Education</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20">
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
+          <h2 class="text-5xl font-bold mb-6">
+            Frontend Developer <br />
+            <span class="gradient-text">Building Digital Experiences</span>
+          </h2>
+          <p class="text-xl text-slate-400 mb-8">
+            Specializing in React, TypeScript & Modern Web Technologies
+          </p>
+          <div class="flex justify-center md:justify-start space-x-6">
+            <a
+              href="https://linkedin.com/in/sourav-sarkar-office-use"
+              target="_blank"
+              class="bg-emerald-500 hover:bg-emerald-600 px-8 py-3 rounded-lg font-medium transition inline-flex items-center"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="./assets/Sourav_Resume.pdf"
+              download
+              class="border border-emerald-500 hover:bg-emerald-500/10 px-8 py-3 rounded-lg transition"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+        <div
+          class="md:w-1/2 flex justify-center mt-12 md:mt-0"
+          data-aos="fade-left"
+        >
+          <div
+            class="w-64 h-64 rounded-full border-4 border-emerald-500 overflow-hidden"
+          >
+            <img
+              src="./assets/sourav_sarkar_profile_picture.jpg"
+              alt="Sourav Sarkar"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <!-- Technical Expertise Section -->
+    <section id="skills" class="p-20 bg-slate-800/30 backdrop-blur-lg">
+      <div class="container mx-auto px-6">
+        <h3
+          class="text-3xl font-bold mb-12 gradient-text text-center"
+          data-aos="fade-up"
+        >
+          Technical Expertise
+        </h3>
+
+        <!-- Languages Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm"
+            data-aos="fade-right"
+          >
+            <h4 class="text-xl font-bold mb-6 text-emerald-400">Languages</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Programming Languages -->
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                  />
+                </svg>
+                <span>C/C++</span>
+              </div>
+
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75m-16.5 0v3.75m16.5 0v3.75"
+                  />
+                </svg>
+                <span>Python</span>
+              </div>
+
+              <!-- Web Technologies -->
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>HTML5</span>
+              </div>
+
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                  />
+                </svg>
+                <span>CSS3</span>
+              </div>
+
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>Tailwind CSS</span>
+              </div>
+
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+                <span>JavaScript</span>
+              </div>
+
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg
+                  class="w-8 h-8 mr-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>TypeScript</span>
+              </div>
+              <div
+                class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+              >
+                <svg class="w-8 h-8 mr-4 text-emerald-400" viewBox="0 0 24 24">
+                  <path
+                    d="M14.202 14.254a1.8 1.8 0 1 1-3.6 0 1.8 1.8 0 0 1 3.6 0z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M12 5.4c-4.2 0-7.2 2.1-7.2 4.8s3 4.8 7.2 4.8 7.2-2.1 7.2-4.8-3-4.8-7.2-4.8zm0 8.4c-3 0-5.4-1.3-5.4-3.6s2.4-3.6 5.4-3.6 5.4 1.3 5.4 3.6-2.4 3.6-5.4 3.6z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M18 14.4c-1.8 0-3.6.9-3.6 2.4s1.8 2.4 3.6 2.4 3.6-.9 3.6-2.4-1.8-2.4-3.6-2.4zm0 3.6c-.6 0-1.2-.3-1.2-.9s.6-.9 1.2-.9 1.2.3 1.2.9-.6.9-1.2.9zM6 14.4c-1.8 0-3.6.9-3.6 2.4S4.2 19.2 6 19.2s3.6-.9 3.6-2.4-1.8-2.4-3.6-2.4zm0 3.6c-.6 0-1.2-.3-1.2-.9s.6-.9 1.2-.9 1.2.3 1.2.9-.6.9-1.2.9z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>React</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks & Tools Section -->
+          <div
+            class="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm"
+            data-aos="fade-left"
+          >
+            <h4 class="text-xl font-bold mb-6 text-emerald-400">
+              Frameworks & Tools
+            </h4>
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Development Tools -->
+              <div class="col-span-2">
+                <h5 class="text-sm font-semibold mb-4 text-slate-400">
+                  Development Tools
+                </h5>
+                <div class="grid grid-cols-2 gap-4">
+                  <div
+                    class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+                  >
+                    <svg
+                      class="w-8 h-8 mr-4 text-emerald-400"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.089 2.91.833.091-.647.349-1.086.635-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 7.07c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.027 2.747-1.027.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.937.359.309.678.92.678 1.852 0 1.335-.012 2.415-.012 2.741 0 .267.18.577.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                      />
+                    </svg>
+                    <span>Git & GitHub</span>
+                  </div>
+
+                  <div
+                    class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+                  >
+                    <svg
+                      class="w-8 h-8 mr-4 text-emerald-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 18.657A8 8 0 016.343 7.343M7.5 7.5l4.243-4.243m0 0L12 4.5l4.243 4.243M7.5 7.5l-4.243 4.243m0 0L4.5 12l4.243 4.243"
+                      />
+                    </svg>
+                    <span>Version Control</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frontend Development -->
+              <div class="col-span-2 mt-6">
+                <h5 class="text-sm font-semibold mb-4 text-slate-400">
+                  Frontend Development
+                </h5>
+                <div class="grid grid-cols-2 gap-4">
+                  <div
+                    class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+                  >
+                    <svg
+                      class="w-8 h-8 mr-4 text-emerald-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <span>Responsive Design</span>
+                  </div>
+
+                  <div
+                    class="flex items-center p-4 bg-slate-900/30 rounded-lg hover:bg-slate-800/50 transition"
+                  >
+                    <svg
+                      class="w-8 h-8 mr-4 text-emerald-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      />
+                    </svg>
+                    <span>Debugging</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-20">
+      <div class="container mx-auto px-6">
+        <h3
+          class="text-3xl font-bold mb-12 gradient-text text-center"
+          data-aos="fade-up"
+        >
+          Featured Projects
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- CV Insight Analyzer -->
+          <div
+            class="group relative bg-slate-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/20"
+            data-aos="fade-up"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./assets/CV-lnsight-Analyzer.png"
+                alt="CV Insight Analyzer"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"
+              ></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h4 class="text-xl font-bold">CV Insight Analyzer</h4>
+                <span
+                  class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-sm rounded-full"
+                  >AI</span
+                >
+              </div>
+              <p class="text-slate-400 mb-6">
+                AI-powered resume evaluation according to job description
+                platform providing automated scoring and improvement
+                suggestions.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="https://resumeiq-cv-analyzer.netlify.app/"
+                  class="flex items-center px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-lg hover:bg-emerald-500/30 transition"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/Sourav-Sarkar-Official/CV-Insight-Analyzer-2025"
+                  class="flex items-center px-4 py-2 border border-emerald-500/30 text-emerald-400 rounded-lg hover:bg-emerald-500/10 transition"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Mock Interviewer -->
+          <div
+            class="group relative bg-slate-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./assets/AI-Interviewer.png"
+                alt="AI Mock Interviewer"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"
+              ></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h4 class="text-xl font-bold">AI Mock Interviewer</h4>
+                <span
+                  class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-sm rounded-full"
+                  >AI</span
+                >
+              </div>
+              <p class="text-slate-400 mb-6">
+                Interactive interview simulator with real-time voice-based
+                answers and feedback storage, featuring 2FA security and
+                Firebase integration.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="https://ai-mock-interviewer-app.web.app/"
+                  class="flex items-center px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-lg hover:bg-emerald-500/30 transition"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/Sourav-Sarkar-Official/AI-Mock-Interviewer-2025"
+                  class="flex items-center px-4 py-2 border border-emerald-500/30 text-emerald-400 rounded-lg hover:bg-emerald-500/10 transition"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="p-20 bg-slate-800/30">
+      <div class="container mx-auto px-4 md:px-6">
+        <h3
+          class="text-3xl font-bold mb-12 gradient-text text-center"
+          data-aos="fade-up"
+        >
+          Project Showcase
+        </h3>
+
+        <div class="slider-container relative overflow-hidden group">
+          <!-- Slider Track -->
+          <div class="slider-track w-max flex">
+            <!-- Original Set -->
+            <div class="flex items-center gap-6 md:gap-8 pr-6 md:pr-8">
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/CV-lnsight-Analyzer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/AI-Interviewer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/AI-Interviewer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/AI-Interviewer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Mirrored Set (Duplicate) -->
+            <div class="flex items-center gap-6 md:gap-8 pr-6 md:pr-8">
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/CV-lnsight-Analyzer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/AI-Interviewer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/CV-lnsight-Analyzer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="./assets/CV-lnsight-Analyzer.png"
+                  alt="Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Gradient Overlays -->
+          <div
+            class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-900/80 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-900/80 to-transparent"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!-- YouTube Section -->
+    <section class="py-20 bg-slate-800/50">
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2" data-aos="fade-right">
+          <img
+            src="./assets/YT.png"
+            alt="YouTube Content"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+        <div
+          class="md:w-1/2 mt-8 md:mt-0 border p-4 rounded-lg border-emerald-800"
+          data-aos="fade-left"
+        >
+          <h3 class="text-2xl font-bold mb-4">Educational Content Creator</h3>
+          <p class="text-slate-400 mb-8">
+            Produced technical tutorials and career guidance content for 1450+
+            subscribers on YouTube, helping students navigate complex
+            programming concepts.
+          </p>
+          <a
+            href="https://youtube.com/@examplanb?si=c0L2a1uYVC7ReHuW"
+            target="_blank"
+            class="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            <i class="fab fa-youtube text-xl mr-3"></i>
+            Have a Look
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-800 py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-8 md:mb-0">
+            <h4 class="text-xl font-bold gradient-text mb-4">Let's Connect</h4>
+            <p class="text-slate-400">
+              Open for new opportunities and collaborations
+            </p>
+          </div>
+          <div class="flex space-x-8">
+            <a
+              href="https://linkedin.com/in/sourav-sarkar-office-use"
+              target="_blank"
+              class="text-slate-400 hover:text-emerald-400"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/Sourav-Sarkar-Official"
+              target="_blank"
+              class="text-slate-400 hover:text-emerald-400"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.089 2.91.833.091-.647.349-1.086.635-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 7.07c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.027 2.747-1.027.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.937.359.309.678.92.678 1.852 0 1.335-.012 2.415-.012 2.741 0 .267.18.577.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                />
+              </svg>
+            </a>
+
+            <!-- Twitter -->
+            <a
+              href="https://x.com/sourav_2024"
+              target="_blank"
+              class="text-slate-400 hover:text-emerald-400"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-slate-400">
+          <p>© 2024 Sourav Sarkar. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuBtn.classList.toggle("text-emerald-300");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.remove("text-emerald-300");
+        }
+      });
+
+      // Smooth scroll for all navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Close mobile menu after clicking a link (for small screens)
+          if (window.innerWidth < 768) {
+            mobileMenu.classList.add("hidden");
+            menuBtn.classList.remove("text-emerald-300");
+          }
+        });
+      });
+
+      // Initialize AOS (Animate On Scroll)
+      AOS.init({ duration: 800, once: true });
+    </script>
+    <script>
+      // Get references to the footer and the "Next Page" button
+      const footer = document.querySelector("footer");
+      const nextPageBtn = document.getElementById("next-page-btn");
+
+      // Function to check if the footer is in view
+      function isFooterInView() {
+        const footerRect = footer.getBoundingClientRect();
+        return footerRect.top <= window.innerHeight && footerRect.bottom >= 0;
+      }
+
+      //Marquee animation
+      // Automatic seamless loop
+      const sliderTrack = document.querySelector(".slider-track");
+
+      // Reset animation periodically to prevent empty space
+      setInterval(() => {
+        sliderTrack.style.animation = "none";
+        void sliderTrack.offsetWidth; // Trigger reflow
+        sliderTrack.style.animation = "slide 20s linear infinite";
+      }, 20000);
+
+      // Pause on hover
+      const sliderContainer = document.querySelector(".slider-container");
+      sliderContainer.addEventListener("mouseenter", () => {
+        sliderTrack.style.animationPlayState = "paused";
+      });
+
+      sliderContainer.addEventListener("mouseleave", () => {
+        sliderTrack.style.animationPlayState = "running";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!-- Add this CSS -->
+<style>
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  
+    .slider-container:hover .slider-track {
+      animation-play-state: paused;
+    }
+  
+    .slider-track {
+      display: flex;
+      animation: slide 20s linear infinite;
+    }
+  </style>
+  
+  <!-- HTML Section -->
+  <section class="py-20 bg-slate-800/30">
+    <div class="container mx-auto px-4 md:px-6">
+      <h3 class="text-3xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">
+        Project Showcase
+      </h3>
+  
+      <div class="slider-container relative overflow-hidden group">
+        <!-- Slider Track -->
+        <div class="slider-track w-max flex">
+          <!-- Original Set -->
+          <div class="flex items-center gap-6 md:gap-8 pr-6 md:pr-8">
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/CV-lnsight-Analyzer.png" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/AI-Interviewer.png" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/project3.jpg" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/project4.jpg" alt="Project" class="w-full h-full object-cover">
+            </div>
+          </div>
+  
+          <!-- Mirrored Set (Duplicate) -->
+          <div class="flex items-center gap-6 md:gap-8 pr-6 md:pr-8">
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/CV-lnsight-Analyzer.png" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/AI-Interviewer.png" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/project3.jpg" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <div class="w-64 md:w-80 aspect-video rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src="./assets/project4.jpg" alt="Project" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Gradient Overlays -->
+        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-900/80 to-transparent"></div>
+        <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-900/80 to-transparent"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- JavaScript -->
+  <script>
+    // Automatic seamless loop
+    const sliderTrack = document.querySelector('.slider-track');
+    
+    // Reset animation periodically to prevent empty space
+    setInterval(() => {
+      sliderTrack.style.animation = 'none';
+      void sliderTrack.offsetWidth; // Trigger reflow
+      sliderTrack.style.animation = 'slide 20s linear infinite';
+    }, 20000);
+  
+    // Pause on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', () => {
+      sliderTrack.style.animationPlayState = 'paused';
+    });
+    
+    sliderContainer.addEventListener('mouseleave', () => {
+      sliderTrack.style.animationPlayState = 'running';
+    });
+  </script>
