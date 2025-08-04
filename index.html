@@ -68,6 +68,43 @@
       position: relative;
     }
   </style>
+
+  <!-- Style for experience section -->
+     <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .experience-section::before {
+      content: '';
+      position: absolute;
+      top: var(--y, 50%);
+      left: var(--x, 50%);
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(45, 212, 191, 0.1), transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+      transition: top 0.2s ease-out, left 0.2s ease-out;
+    }
+
+    .experience-item {
+      background: rgba(38, 50, 64, 0.25);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      opacity: 0;
+      gap: 6px;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .experience-item.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body class="bg-slate-900 text-slate-100">
@@ -118,7 +155,7 @@
             class="bg-emerald-500 hover:bg-emerald-600 px-8 py-3 rounded-lg font-medium transition inline-flex items-center">
             LinkedIn
           </a>
-          <a href="./assets/Sourav_Resume.pdf" download
+          <a href="./assets/sourav-cv.pdf" download
             class="border border-emerald-500 hover:bg-emerald-500/10 px-8 py-3 rounded-lg transition">
             Download CV
           </a>
@@ -130,16 +167,6 @@
             class="w-full h-full object-cover" />
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- skills Section -->
-  <section id="skills" class="p-10 md:p-20 bg-slate-800/30 backdrop-blur-lg">
-    <div class="container mx-auto px-4 sm:px-6 ">
-      <h3 class="text-3xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">
-        Technical Expertise
-      </h3>
-      <div id="skills-section"></div>
     </div>
   </section>
 
@@ -223,6 +250,21 @@
         </div>
       </div>
   </section>
+
+  <!-- skills Section -->
+  <section id="skills" class="p-10 md:p-20 bg-slate-800/30 backdrop-blur-lg">
+    <div class="container mx-auto px-4 sm:px-6 ">
+      <h3 class="text-3xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">
+        Technical Expertise
+      </h3>
+      <div id="skills-section"></div>
+    </div>
+  </section>
+
+
+<!-- Experience Section -->
+  <div id="experience-section"></div>
+
   <!-- YouTube Section -->
   <section class="py-20 bg-slate-800/50">
     <div class="container mx-auto px-6">
@@ -259,10 +301,9 @@
         class="md:w-1/2 mt-8 md:mt-12 border p-4 rounded-lg border-emerald-800 mx-auto flex flex-col justify-center items-center text-center"
         data-aos="fade-left">
         <h3 class="text-2xl font-bold mb-4 text-emerald-400">Educational Content Creator</h3>
-        <p class="text-white font-medium mb-8 ">
-          Produced technical tutorials and career guidance content for <span
-            class="text-yellow-300 font-bold text-2xl">1.5K+ subscribers</span> on YouTube, helping students navigate
-          complex programming concepts.
+        <p class="text-white font-medium mb-8 text-xl">
+          Created educational contents for <span
+            class="text-yellow-300 font-bold text-xl">1.5K+ subscribers</span> on YouTube,helping students better understand academic concepts and make informed career choices.
         </p>
         <a href="https://youtube.com/@examplanb?si=c0L2a1uYVC7ReHuW" target="_blank"
           class="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all duration-300 hover:scale-105">
@@ -272,7 +313,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer id="contact" class="bg-slate-800 py-12">
     <div class="container mx-auto px-6">
@@ -445,11 +486,16 @@
     }
   });
 </script>
+
+  <!-- Experience JS file -->
+  <script src="experience.js"></script>
+
+
 <!-- Popup HTML  -->
 <div id="education-popup" 
      class="hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-slate-800 text-white border border-emerald-500 px-6 py-4 rounded-xl shadow-lg flex items-center gap-4">
   <i class="fas fa-user-graduate text-2xl text-emerald-400"></i>
-  <span>Want to see my education journey?</span>
+  <span>Want to see my educational journey?</span>
   <a href="education.html" 
      class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition">Explore</a>
   <button onclick="document.getElementById('education-popup').style.display='none'" class="ml-2 text-slate-300 hover:text-red-400">&times;</button>

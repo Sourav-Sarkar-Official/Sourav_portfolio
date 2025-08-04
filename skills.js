@@ -68,7 +68,7 @@ function renderSkills() {
   skillsContainer.innerHTML = `
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
       <div class="p-6 rounded-xl backdrop-blur-lg shadow-lg"
-        style="background: linear-gradient(135deg, rgba(255,0,120,0.25) 0%, rgba(120,0,255,0.25) 100%); border: 1px solid rgba(255,255,255,0.15);"
+        style="background: linear-gradient(135deg, rgba(255, 0, 119, 0.51) 0%, rgba(120,0,255,0.25) 100%); border: 1px solid rgba(255,255,255,0.15);"
         data-aos="fade-right">
         <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Languages</h4>
         <div class="grid grid-cols-2 gap-4">
@@ -76,7 +76,7 @@ function renderSkills() {
         </div>
       </div>
       <div class="p-6 rounded-xl backdrop-blur-lg shadow-lg"
-        style="background: linear-gradient(135deg, rgba(0,255,120,0.15) 0%, rgba(0,120,255,0.15) 100%); border: 1px solid rgba(255,255,255,0.15);"
+        style="background: linear-gradient(135deg, rgba(0, 255, 119, 0.46) 0%, rgba(0, 119, 255, 0.51) 100%); border: 1px solid rgba(255,255,255,0.15);"
         data-aos="fade-up">
         <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Frameworks</h4>
         <div class="grid grid-cols-1 gap-4">
@@ -84,7 +84,7 @@ function renderSkills() {
         </div>
       </div>
       <div class="p-6 rounded-xl backdrop-blur-lg shadow-lg"
-        style="background: linear-gradient(135deg, rgba(120,0,255,0.15) 0%, rgba(255,0,120,0.15) 100%); border: 1px solid rgba(255,255,255,0.15);"
+        style="background: linear-gradient(135deg,rgb(145, 25, 4),rgb(114, 27, 15));  border: 1px solid rgba(28, 133, 7, 0.18);"
         data-aos="fade-left">
         <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Tools</h4>
         <div class="grid grid-cols-1 gap-4">
