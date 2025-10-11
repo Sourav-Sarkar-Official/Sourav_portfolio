@@ -40,14 +40,16 @@ const languages = [
 
 const frameworks = [
   { icon: "fa-brands fa-react", color: "#22D3EE", label: "React" },
-  { icon: "fa-solid fa-wind", color: "#38BDF8", label: "Tailwind CSS" }
+  { icon: "fa-solid fa-wind", color: "#38BDF8", label: "Tailwind CSS" },
+  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "Node.js" },
+  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="w-6 h-6 sm:w-8 sm:h-8 bg-white rounded" />`, label: "Express" }
 ];
 
 const tools = [
+  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "MongoDB" },
+  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "MySQL" },
+  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "Firebase" },
   { icon: "fa-brands fa-git-alt", color: "#F97316", label: "Git & GitHub" },
-  { icon: "fa-solid fa-code-merge", color: "#EC4899", label: "Version Control" },
-  { icon: "fa-solid fa-mobile-screen", color: "#84CC16", label: "Responsive Design" },
-  { icon: "fa-solid fa-bug", color: "#F87171", label: "Debugging" }
 ];
 
 function createSkillCard({ icon, color, label }) {

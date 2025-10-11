@@ -11,8 +11,8 @@ const experienceHTML = `
       </p>
     </div>
 
-    <div class="relative before:absolute before:content-[''] before:w-[3px] before:bg-white/10 before:top-0 before:bottom-0 before:left-[50%] before:translate-x-[-50%]">
-  <div class="space-y-20">
+    <div class="timeline-container max-w-6xl mx-auto">
+  <div class="demo-card-wrapper flex flex-col lg:flex-row lg:flex-wrap justify-between">
 
       <!-- Left Card -->
         <div class="relative flex justify-start">
@@ -29,24 +29,8 @@ const experienceHTML = `
               I am an educational content creator and the founder of the YouTube channel Examplan-B, which has positively impacted over 10,000+ students through accessible and engaging educational content. As a team, we have collectively taught over 200+ students through our structured courses.            </p>
           </div>
         </div>
-
-      <!-- Right Card -->
-        <div class="relative flex justify-end">
-          <div class="absolute left-1/2 -translate-x-1/2 top-6 w-4 h-4 bg-teal-400 border-4 border-gray-900 rounded-full z-10"></div>
-          <div class="experience-item w-full sm:w-1/2 p-8">
-            <div class="flex justify-between items-start">
-              <div>
-                <h3 class="text-2xl font-bold text-white">The Joy of Computing using Python</h3>
-                <p class="mt-1 text-lg text-teal-300 font-medium"> NPTEL, IIT Madras</p>
-              </div>
-              <div class="text-sm font-semibold text-gray-400 text-right ml-4">Jan–Apr 2023</div>
-            </div>
-            <p class="mt-6 text-gray-300">  
-            Completed the NPTEL-certified course 'The Joy of Computing using Python', offered by IIT Madras. This 12-week program covered foundational programming concepts, emphasizing logic building and problem-solving using Python.
-          </div>
-        </div>
         <!-- Right Card -->
-        <div class="relative flex justify-start">
+        <div class="relative flex justify-end">
           <div class="absolute left-1/2 -translate-x-1/2 top-6 w-4 h-4 bg-teal-400 border-4 border-gray-900 rounded-full z-10"></div>
           <div class="experience-item w-full sm:w-1/2 p-8">
             <div class="flex justify-between items-start">
