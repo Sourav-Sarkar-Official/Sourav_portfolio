@@ -1,5 +1,5 @@
 const experienceHTML = `
-<section class="experience-section relative py-20 sm:py-32 overflow-hidden">
+<section class="experience-section relative py-16 sm:py-15 md:py-12 lg:py-10 overflow-hidden">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
 
     <div class="text-center mb-20">
@@ -12,7 +12,7 @@ const experienceHTML = `
     </div>
 
     <div class="timeline-container max-w-6xl mx-auto">
-  <div class="demo-card-wrapper flex flex-col lg:flex-row lg:flex-wrap justify-between">
+  <div class="demo-card-wrapper flex flex-col lg:flex-row lg:flex-wrap justify-between gap-8 ">
 
       <!-- Left Card -->
         <div class="relative flex justify-start">
@@ -26,7 +26,7 @@ const experienceHTML = `
               <div class="text-sm font-semibold text-gray-400 text-right ml-4">2022 - Present</div>
             </div>
             <p class="mt-6 text-gray-300">  
-              I am an educational content creator and the founder of the YouTube channel Examplan-B, which has positively impacted over 10,000+ students through accessible and engaging educational content. As a team, we have collectively taught over 200+ students through our structured courses.            </p>
+              Founded and grew a <span class="text-teal-400">2,000+</span> member university student community for academic collaboration and resource sharing, while mentoring and teaching semester subjects to <span class="text-teal-400">100+</span> junior students.</p>
           </div>
         </div>
         <!-- Right Card -->

@@ -48,7 +48,7 @@ const frameworks = [
 const tools = [
   { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "MongoDB" },
   { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "MySQL" },
-  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-6 h-6 sm:w-8 sm:h-8" />`, label: "Firebase" },
+  { icon: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Firebase" class="w-6 h-6 sm:w-8 sm:h-8"/>`, label: "Supabase" },
   { icon: "fa-brands fa-git-alt", color: "#F97316", label: "Git & GitHub" },
 ];
 

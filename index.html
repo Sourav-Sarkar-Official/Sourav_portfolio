@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Sourav Sarkar | Web Developer</title>
+  <title>Sourav Sarkar | Portfolio</title>
   <link rel="icon" href="./assets/sourav_sarkar_profile_picture.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,8 +15,7 @@
   <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
   <style>
     /* Remove Horizontal Scroll */
-    html
-    body {
+    html body {
       max-width: 100%;
       overflow-x: hidden;
     }
@@ -69,18 +68,37 @@
 
     /* Hero Section Enhancements */
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
 
     @keyframes glow {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.6; }
+
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 0.6;
+      }
     }
 
     @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     .floating-shape {
@@ -97,12 +115,19 @@
 
     /* Gradient text animation */
     @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     .animated-gradient {
-      background: linear-gradient(-45deg, #34d399, #06b6d4, #3b82f6, #8b5cf6);
+      background: linear-gradient(-45deg, #34d399, #06b6d4, #f72585, #ffd60a);
       background-size: 400% 400%;
       animation: gradient-shift 4s ease infinite;
       -webkit-background-clip: text;
@@ -124,7 +149,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: left 0.5s;
     }
 
@@ -148,110 +173,7 @@
       animation: rotate 8s linear infinite;
     }
 
-    /* Projects Section Enhancements */
-    @keyframes project-float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(2deg); }
-    }
-
-    @keyframes card-glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(52, 211, 153, 0.1); }
-      50% { box-shadow: 0 0 40px rgba(52, 211, 153, 0.3); }
-    }
-
-    @keyframes tech-badge-pulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.05); opacity: 1; }
-    }
-
-    .project-card-enhanced {
-      position: relative;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      animation: project-float 6s ease-in-out infinite;
-    }
-
-    .project-card-enhanced:nth-child(even) {
-      animation-delay: 2s;
-    }
-
-    .project-card-enhanced:hover {
-      transform: translateY(-15px) scale(1.02);
-      animation-play-state: paused;
-    }
-
-
-    .project-image-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.75rem 0.75rem 0 0;
-    }
-
-    .project-image-container::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .project-card-enhanced:hover .project-image-container::after {
-      opacity: 1;
-    }
-
-    .project-tech-badge {
-      animation: tech-badge-pulse 3s ease-in-out infinite;
-    }
-
-    .project-tech-badge:nth-child(2) {
-      animation-delay: 1s;
-    }
-
-    .project-tech-badge:nth-child(3) {
-      animation-delay: 2s;
-    }
-
-    .project-btn {
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .project-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .project-btn:hover::before {
-      left: 100%;
-    }
-
-    .project-btn-primary {
-      background: linear-gradient(135deg, #34d399, #06b6d4);
-      box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
-    }
-
-    .project-btn-primary:hover {
-      box-shadow: 0 8px 25px rgba(52, 211, 153, 0.5);
-      transform: translateY(-2px);
-    }
-
-    .project-btn-secondary {
-      border: 2px solid #34d399;
-      background: rgba(52, 211, 153, 0.05);
-    }
-
-    .project-btn-secondary:hover {
-      background: rgba(52, 211, 153, 0.15);
-      border-color: #06b6d4;
-      transform: translateY(-2px);
-    }
+    /* Projects Section - Removed effects for cleaner design */
   </style>
 
   <!-- Style for experience section -->
@@ -294,17 +216,26 @@
 
 <body class="bg-slate-900 text-slate-100">
   <!-- Navigation -->
-  <nav class="fixed w-full bg-slate-800/80 backdrop-blur-sm z-50">
+  <nav
+    class="fixed w-full bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-md border-b border-emerald-500/20 z-50 shadow-lg">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <!-- Logo -->
-      <h1 class="text-2xl font-bold gradient-text">Portfolio Website</h1>
+      <h1 class="text-2xl font-bold gradient-text hover:opacity-80 transition">Portfolio</h1>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-8">
-        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
-        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
-        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
-        <a href="education.html" class="hover:text-emerald-400 transition">Education</a>
+      <div class="hidden md:flex space-x-1">
+        <a href="#projects"
+          class="px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition duration-300">Projects</a>
+        <a href="#skills"
+          class="px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition duration-300">Skills</a>
+        <a href="#coding-profile"
+          class="px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition duration-300">Coding</a>
+        <a href="#experience-section"
+          class="px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition duration-300">Experience</a>
+        <a href="#certifications"
+          class="px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition duration-300">Certifications</a>
+        <a href="#contact"
+          class="px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition duration-300">Contact</a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -316,11 +247,20 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 bg-slate-800 rounded-lg p-4">
-      <a href="#projects" class="block hover:text-emerald-400 transition">Projects</a>
-      <a href="#skills" class="block hover:text-emerald-400 transition">Skills</a>
-      <a href="#contact" class="block hover:text-emerald-400 transition">Contact</a>
-      <a href="education.html" class="block hover:text-emerald-400 transition">Education</a>
+    <div id="mobile-menu"
+      class="hidden md:hidden mt-4 space-y-2 bg-gradient-to-b from-slate-800 to-slate-900 rounded-xl p-4 border border-emerald-500/20">
+      <a href="#projects"
+        class="block px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition">Projects</a>
+      <a href="#skills"
+        class="block px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition">Skills</a>
+      <a href="#coding-profile"
+        class="block px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition">Coding</a>
+      <a href="#experience-section"
+        class="block px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition">Experience</a>
+      <a href="#certifications"
+        class="block px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition">Certifications</a>
+      <a href="#contact"
+        class="block px-4 py-2 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition">Contact</a>
     </div>
   </nav>
 
@@ -330,25 +270,38 @@
     <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <!-- Floating geometric shapes -->
       <div class="absolute top-20 left-10 w-20 h-20 bg-emerald-500/10 rounded-full floating-shape"></div>
-      <div class="absolute top-40 right-20 w-16 h-16 bg-blue-500/10 rounded-full floating-shape" style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-40 left-20 w-12 h-12 bg-cyan-500/10 rounded-full floating-shape" style="animation-delay: 2s;"></div>
-      <div class="absolute bottom-20 right-10 w-24 h-24 bg-emerald-500/10 rounded-full floating-shape" style="animation-delay: 0.5s;"></div>
-      
+      <div class="absolute top-40 right-20 w-16 h-16 bg-blue-500/10 rounded-full floating-shape"
+        style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-40 left-20 w-12 h-12 bg-cyan-500/10 rounded-full floating-shape"
+        style="animation-delay: 2s;"></div>
+      <div class="absolute bottom-20 right-10 w-24 h-24 bg-emerald-500/10 rounded-full floating-shape"
+        style="animation-delay: 0.5s;"></div>
+
       <!-- Additional geometric shapes -->
-      <div class="absolute top-1/3 right-1/3 w-8 h-8 bg-purple-500/10 rounded-full floating-shape" style="animation-delay: 1.5s;"></div>
-      <div class="absolute bottom-1/3 left-1/3 w-14 h-14 bg-pink-500/10 rounded-full floating-shape" style="animation-delay: 2.5s;"></div>
-      
+      <div class="absolute top-1/3 right-1/3 w-8 h-8 bg-purple-500/10 rounded-full floating-shape"
+        style="animation-delay: 1.5s;"></div>
+      <div class="absolute bottom-1/3 left-1/3 w-14 h-14 bg-pink-500/10 rounded-full floating-shape"
+        style="animation-delay: 2.5s;"></div>
+
       <!-- Grid pattern overlay -->
       <div class="absolute inset-0 opacity-5">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
+        <div class="absolute inset-0"
+          style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;">
+        </div>
       </div>
-      
+
       <!-- Gradient orbs -->
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-full blur-3xl glow-effect"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl glow-effect" style="animation-delay: 1s;"></div>
-      
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-full blur-3xl glow-effect">
+      </div>
+      <div
+        class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl glow-effect"
+        style="animation-delay: 1s;"></div>
+
       <!-- Additional gradient orb -->
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl glow-effect" style="animation-delay: 2s;"></div>
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl glow-effect"
+        style="animation-delay: 2s;"></div>
     </div>
 
     <div class="container mx-auto px-6 relative z-10 pt-20">
@@ -356,26 +309,28 @@
         <!-- Left Content -->
         <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
           <!-- Greeting -->
-          <div class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+          <div
+            class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
             <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
-            Available for opportunities
+            Open to Work
           </div>
-          
+
           <!-- Main Heading -->
           <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             <span class="block text-slate-100" data-aos="fade-up" data-aos-delay="100">Hi, I'm</span>
             <span class="block animated-gradient" data-aos="fade-up" data-aos-delay="200">
               Sourav Sarkar
             </span>
-            <span class="block text-slate-300 text-4xl lg:text-5xl mt-2" data-aos="fade-up" data-aos-delay="300">Full Stack Developer</span>
+            <span class="block text-slate-300 text-4xl lg:text-5xl mt-2" data-aos="fade-up" data-aos-delay="300">Full
+              Stack Developer</span>
           </h1>
-          
+
           <!-- Description -->
           <p class="text-xl lg:text-2xl text-slate-400 mb-8 leading-relaxed max-w-2xl">
-            Crafting exceptional digital experiences with modern technologies. 
-            <span class="text-emerald-400 font-medium">Building the future, one line of code at a time.</span>
+            Aspiring Full-Stack Developer with hands-on experience in <span class="text-emerald-400 font-medium">MERN
+              stack</span> development, seeking an entry-level position to leverage my knowledge.
           </p>
-          
+
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
             <a href="https://www.linkedin.com/in/souravsarkar-in/" target="_blank"
@@ -384,32 +339,38 @@
                 <i class="fab fa-linkedin mr-2"></i>
                 Connect with me
               </span>
-              <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              </div>
             </a>
-            
+
             <a href="https://drive.google.com/file/d/14YwnsFJZ67yMQuK4vs_t32leT-w-_bOM/view?usp=sharing" download
               class="hero-btn group px-8 py-4 border-2 border-emerald-500/50 hover:border-emerald-400 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 transform hover:scale-105">
               <span class="flex items-center justify-center">
                 <i class="fa-solid fa-download mr-2 text-emerald-400"></i>
-                Download Resume
+                My Resume
               </span>
             </a>
           </div>
         </div>
-        
+
         <!-- Right Content - Profile Image -->
         <div class="lg:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="200">
           <div class="relative">
             <!-- Outer glow ring -->
-            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-full blur-lg opacity-30 glow-effect"></div>
-            
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-full blur-lg opacity-30 glow-effect">
+            </div>
+
             <!-- Main image container -->
             <div class="relative w-80 h-80 lg:w-96 lg:h-96">
               <!-- Decorative floating elements -->
               <div class="absolute -top-4 -right-4 w-8 h-8 bg-emerald-500 rounded-full floating-shape"></div>
-              <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-500 rounded-full floating-shape" style="animation-delay: 1s;"></div>
-              <div class="absolute top-1/2 -right-8 w-4 h-4 bg-blue-500 rounded-full floating-shape" style="animation-delay: 2s;"></div>
-              
+              <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-500 rounded-full floating-shape"
+                style="animation-delay: 1s;"></div>
+              <div class="absolute top-1/2 -right-8 w-4 h-4 bg-blue-500 rounded-full floating-shape"
+                style="animation-delay: 2s;"></div>
+
               <!-- Image with modern styling and rotating border -->
               <div class="profile-image w-full h-full rounded-full p-1">
                 <div class="w-full h-full rounded-full overflow-hidden bg-slate-800 p-2">
@@ -417,20 +378,25 @@
                     class="w-full h-full object-cover rounded-full transition-transform duration-500 hover:scale-105" />
                 </div>
               </div>
-              
+
               <!-- Floating elements with enhanced animations -->
-              <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-800 border border-emerald-500/50 rounded-lg px-3 py-2 text-sm text-emerald-400 animate-pulse hover:bg-emerald-500/10 transition-all duration-300">
+              <div
+                class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-800 border border-emerald-500/50 rounded-lg px-3 py-2 text-sm text-emerald-400 animate-pulse hover:bg-emerald-500/10 transition-all duration-300">
                 <i class="fas fa-code mr-1"></i>
                 Developer
               </div>
-              
+
               <!-- Additional floating elements -->
-              <div class="absolute top-1/4 -left-8 bg-slate-800 border border-cyan-500/50 rounded-lg px-3 py-2 text-sm text-cyan-400 animate-pulse" style="animation-delay: 1s;">
+              <div
+                class="absolute top-1/4 -left-8 bg-slate-800 border border-cyan-500/50 rounded-lg px-3 py-2 text-sm text-cyan-400 animate-pulse"
+                style="animation-delay: 1s;">
                 <i class="fas fa-rocket mr-1"></i>
                 Innovator
               </div>
-              
-              <div class="absolute bottom-1/4 -right-12 bg-slate-800 border border-blue-500/50 rounded-lg px-3 py-2 text-sm text-blue-400 animate-pulse" style="animation-delay: 2s;">
+
+              <div
+                class="absolute bottom-1/4 -right-12 bg-slate-800 border border-blue-500/50 rounded-lg px-3 py-2 text-sm text-blue-400 animate-pulse"
+                style="animation-delay: 2s;">
                 <i class="fas fa-lightbulb mr-1"></i>
                 Creator
               </div>
@@ -439,7 +405,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-400 animate-bounce">
       <div class="flex flex-col items-center">
@@ -450,145 +416,347 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="relative py-20 sm:py-24 md:py-32 overflow-hidden">
+  <section id="projects" class="relative py-16 sm:py-15 md:py-12 lg:py-10 overflow">
     <!-- Enhanced Background -->
     <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <!-- Floating geometric elements -->
       <div class="absolute top-20 left-10 w-16 h-16 bg-emerald-500/5 rounded-full floating-shape"></div>
-      <div class="absolute top-40 right-20 w-12 h-12 bg-cyan-500/5 rounded-full floating-shape" style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-40 left-20 w-20 h-20 bg-blue-500/5 rounded-full floating-shape" style="animation-delay: 2s;"></div>
-      <div class="absolute bottom-20 right-10 w-14 h-14 bg-purple-500/5 rounded-full floating-shape" style="animation-delay: 0.5s;"></div>
-      
+      <div class="absolute top-40 right-20 w-12 h-12 bg-cyan-500/5 rounded-full floating-shape"
+        style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-40 left-20 w-20 h-20 bg-blue-500/5 rounded-full floating-shape"
+        style="animation-delay: 2s;"></div>
+      <div class="absolute bottom-20 right-10 w-14 h-14 bg-purple-500/5 rounded-full floating-shape"
+        style="animation-delay: 0.5s;"></div>
+
       <!-- Grid pattern overlay -->
       <div class="absolute inset-0 opacity-5">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(52, 211, 153, 0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+        <div class="absolute inset-0"
+          style="background-image: radial-gradient(circle at 2px 2px, rgba(52, 211, 153, 0.3) 1px, transparent 0); background-size: 40px 40px;">
+        </div>
       </div>
-      
+
       <!-- Gradient orbs for depth -->
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-500/5 to-cyan-500/5 rounded-full blur-3xl glow-effect"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl glow-effect" style="animation-delay: 2s;"></div>
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-500/5 to-cyan-500/5 rounded-full blur-3xl glow-effect">
+      </div>
+      <div
+        class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl glow-effect"
+        style="animation-delay: 2s;"></div>
     </div>
 
     <div class="container mx-auto px-4 sm:px-6 relative z-10">
       <!-- Enhanced Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <div class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+        <div
+          class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
           <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
           My Work
         </div>
-        
+
         <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           <span class="block text-slate-100">Featured</span>
           <span class="block animated-gradient">Projects</span>
         </h2>
-        
+
         <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
           Explore my latest creations that showcase innovation, technical expertise, and creative problem-solving.
           <span class="text-emerald-400 font-medium">Each project tells a unique story.</span>
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-        <!-- Project Card 1 - Enhanced -->
-        <div class="project-card-enhanced" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl shadow-slate-900/50 flex flex-col h-full">
-            <!-- Enhanced Image Container -->
-            <div class="project-image-container">
-              <img src="./assets/AI-Interviewer.png" alt="AI Mock Interviewer"
-                class="w-full h-56 sm:h-64 object-cover transition-transform duration-700 hover:scale-110" />
-              
-              <!-- Overlay with gradient -->
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
-              
-              <!-- Floating tech badges -->
-              <div class="absolute top-4 left-4 flex gap-2">
-                <span class="project-tech-badge px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-medium rounded-full border border-emerald-500/30">
-                  <i class="fas fa-brain mr-1"></i>AI
-                </span>
-              </div>
-              
-              <!-- Status indicator -->
-              <div class="absolute top-4 right-4 flex items-center gap-1 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">
-                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                Live
-              </div>
-            </div>
-            
-            <!-- Enhanced Content -->
-            <div class="p-6 flex flex-col flex-grow">
-              <div class="mb-4">
-                <h3 class="text-2xl font-bold text-slate-100 mb-2">AI Mock Interviewer</h3>
-                <p class="text-slate-400 leading-relaxed flex-grow">
-                  Interactive voice-based interview simulator with 2FA authentication and real-time performance feedback
-                  using Firebase.
-                </p>
-              </div>
-              
-              <!-- Enhanced Buttons -->
-              <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                <a href="https://ai-mock-interviewer-app.web.app/" target="_blank"
-                  class="project-btn project-btn-primary flex-1 flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-slate-100 transition-all duration-300">
-                  <i class="fas fa-external-link-alt mr-2"></i>
-                  Live Demo
-                </a>
-                <a href="https://github.com/Sourav-Sarkar-Official/AI-Mock-Interviewer-2025" target="_blank"
-                  class="project-btn project-btn-secondary flex-1 flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-emerald-400 transition-all duration-300">
-                  <i class="fab fa-github mr-2"></i>
-                  GitHub
-                </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="300">
+          <!-- Image Container -->
+          <div class="p-3">
+            <div class="relative h-48 overflow-hidden bg-slate-200 rounded-lg border border-slate-300">
+              <img src="./assets/MCA21.webp" alt="Project 5" class="w-full h-full object-cover" />
+
+              <!-- Status Badge -->
+              <div class="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                Featured
               </div>
             </div>
           </div>
+
+          <!-- Content -->
+          <div class="p-4">
+            <!-- Tech Badge -->
+            <div class="mb-3">
+              <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Full Stack</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-slate-800 mb-2">SentiMind</h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm mb-4">
+              Developed a platform that performs sentiment analysis and summarization of stakeholder feedback on
+              government policies with role-based access control.
+            </p>
+
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 mb-4 pb-4 border-b border-slate-200">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"
+                title="React" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS" title="Tailwind CSS" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="JavaScript" title="JavaScript" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                alt="Node.js" title="Node.js" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                alt="Express" title="Express" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+                alt="Supabase" title="Supabase" class="w-6 h-6" />
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <a href="#" target="_blank"
+                class="flex-1 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i>
+                Live Demo
+              </a>
+              <a href="#" target="_blank"
+                class="flex-1 px-4 py-2 border-2 border-slate-300 hover:border-slate-400 text-slate-800 font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fab fa-github mr-1"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- Project Card 2 - Enhanced -->
-        <div class="project-card-enhanced" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl shadow-slate-900/50 flex flex-col h-full">
-            <!-- Enhanced Image Container -->
-            <div class="project-image-container">
-              <img src="./assets/CV-lnsight-Analyzer.png" alt="CV Insight Analyzer"
-                class="w-full h-56 sm:h-64 object-cover transition-transform duration-700 hover:scale-110" />
-              
-              <!-- Overlay with gradient -->
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
-              
-              <!-- Floating tech badges -->
-              <div class="absolute top-4 left-4 flex gap-2">
-                <span class="project-tech-badge px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-medium rounded-full border border-emerald-500/30">
-                  <i class="fas fa-brain mr-1"></i>AI
-                </span>
-                
-              </div>
-              
-              <!-- Status indicator -->
-              <div class="absolute top-4 right-4 flex items-center gap-1 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">
-                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                Live
+        <!-- Project Card 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="250">
+          <!-- Image Container -->
+          <div class="p-3">
+            <div class="relative h-48 overflow-hidden bg-slate-200 rounded-lg border border-slate-300">
+              <img src="./assets/Examplanb.webp" alt="Project 4" class="w-full h-full object-cover" />
+
+              <!-- Status Badge -->
+              <div class="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                Featured
               </div>
             </div>
-            
-            <!-- Enhanced Content -->
-            <div class="p-6 flex flex-col flex-grow">
-              <div class="mb-4">
-                <h3 class="text-2xl font-bold text-slate-100 mb-2">CV Insight Analyzer</h3>
-                <p class="text-slate-400 leading-relaxed flex-grow">
-                  AI-powered resume evaluation platform that scores resumes based on job description match and provides
-                  improvement suggestions.
-                </p>
+          </div>
+
+          <!-- Content -->
+          <div class="p-4">
+            <!-- Tech Badge -->
+            <div class="mb-3">
+              <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Full Stack</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Examplan-B</h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm mb-4">
+              Created an EdTech platform (Examplan-B) designed to support students with study resources, mock
+              examinations, and online courses.</p>
+
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 mb-4 pb-4 border-b border-slate-200">
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js" class="w-6 h-6" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS" title="Tailwind CSS" class="w-6 h-6" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <a href="#" target="_blank"
+                class="flex-1 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i>
+                Live Demo
+              </a>
+              <a href="#" target="_blank"
+                class="flex-1 px-4 py-2 border-2 border-slate-300 hover:border-slate-400 text-slate-800 font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fab fa-github mr-1"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="100">
+          <!-- Image Container -->
+          <div class="p-3">
+            <div class="relative h-48 overflow-hidden bg-slate-200 rounded-lg border border-slate-300">
+              <img src="./assets/AI-Interviewer.webp" alt="AI Mock Interviewer" class="w-full h-full object-cover" />
+
+              <!-- Status Badge -->
+              <div class="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                Featured
               </div>
-            
-              <!-- Enhanced Buttons -->
-              <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                <a href="https://resumeiq-parser.netlify.app/" target="_blank"
-                  class="project-btn project-btn-primary flex-1 flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-slate-100 transition-all duration-300">
-                  <i class="fas fa-external-link-alt mr-2"></i>
-                  Live Demo
-                </a>
-                <a href="https://github.com/Sourav-Sarkar-Official/CV-Insight-Analyzer-2025" target="_blank"
-                  class="project-btn project-btn-secondary flex-1 flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-emerald-400 transition-all duration-300">
-                  <i class="fab fa-github mr-2"></i>
-                  GitHub
-                </a>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-4">
+            <!-- Tech Badge -->
+            <div class="mb-3">
+              <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">MERN Stack</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-slate-800 mb-2">AI Mock Interviewer</h3>
+            <!-- Description -->
+            <p class="text-slate-600 text-sm mb-4">
+              Interactive voice-based interview simulator with 2FA authentication and real-time feedback.
+            </p>
+
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 mb-4 pb-4 border-b border-slate-200">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"
+                title="React" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS" title="Tailwind CSS" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                alt="TypeScript" title="TypeScript" class="w-6 h-6" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+                alt="Firebase" title="Firebase" class="w-6 h-6" />
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <a href="https://ai-mock-interviewer-app.web.app/" target="_blank"
+                class="flex-1 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Sourav-Sarkar-Official/AI-Mock-Interviewer-2025" target="_blank"
+                class="flex-1 px-4 py-2 border-2 border-slate-300 hover:border-slate-400 text-slate-800 font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fab fa-github mr-1"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="150">
+          <!-- Image Container -->
+          <div class="p-3">
+            <div class="relative h-48 overflow-hidden bg-slate-200 rounded-lg border border-slate-300">
+              <img src="./assets/CV-lnsight-Analyzer.webp" alt="CV Insight Analyzer"
+                class="w-full h-full object-cover" />
+
+              <!-- Status Badge -->
+              <div class="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                Featured
               </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-4">
+            <!-- Tech Badge -->
+            <div class="mb-3">
+              <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">AI & MERN</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-slate-800 mb-2">CV Insight Analyzer</h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm mb-4">
+              AI-powered resume evaluation platform with job matching and improvement suggestions.
+            </p>
+
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 mb-4 pb-4 border-b border-slate-200">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"
+                title="React" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="JavaScript" title="JavaScript" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS" title="Tailwind CSS" class="w-6 h-6" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <a href="https://resumeiq-parser.netlify.app/" target="_blank"
+                class="flex-1 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Sourav-Sarkar-Official/CV-Insight-Analyzer-2025" target="_blank"
+                class="flex-1 px-4 py-2 border-2 border-slate-300 hover:border-slate-400 text-slate-800 font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fab fa-github mr-1"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="200">
+          <!-- Image Container -->
+          <div class="p-3">
+            <div class="relative h-48 overflow-hidden bg-slate-200 rounded-lg border border-slate-300">
+              <img src="./assets/User_Enquiry.webp" alt="Project 3" class="w-full h-full object-cover" />
+
+              <!-- Status Badge -->
+              <div class="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                Featured
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-4">
+            <!-- Tech Badge -->
+            <div class="mb-3">
+              <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Web App</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-slate-800 mb-2">User Enquiry Form</h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm mb-4">
+              Built a MERN stack application that allows users to submit enquiries with full CRUD functionality for
+              managing records.
+            </p>
+
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 mb-4 pb-4 border-b border-slate-200">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"
+                title="React" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="JavaScript" title="JavaScript" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                alt="Node.js" title="Node.js" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                alt="Express" title="Express" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB" title="MongoDB" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS" title="Tailwind CSS" class="w-6 h-6" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <a href="#" target="_blank"
+                class="flex-1 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i>
+                Live Demo
+              </a>
+              <a href="#" target="_blank"
+                class="flex-1 px-4 py-2 border-2 border-slate-300 hover:border-slate-400 text-slate-800 font-semibold rounded-lg transition-colors duration-300 text-center text-sm">
+                <i class="fab fa-github mr-1"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -596,25 +764,148 @@
   </section>
 
   <!-- skills Section -->
-  <section id="skills" class="p-10 md:p-20 bg-slate-800/30 backdrop-blur-lg">
-    <div class="container mx-auto px-4 sm:px-6 ">
-      <h3 class="text-3xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">
-        Technical Expertise
-      </h3>
+  <section id="skills" class="py-16 sm:py-15 md:py-12 lg:py-10 px-4 sm:px-6 bg-slate-800/30 backdrop-blur-lg">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div
+          class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+          My Skills
+        </div>
+
+        <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          <span class="block text-slate-100">Technical</span>
+          <span class="block animated-gradient">Expertise</span>
+        </h2>
+
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          Technologies and tools I've mastered throughout my development journey.
+        </p>
+      </div>
+
       <div id="skills-section"></div>
     </div>
   </section>
 
+  <!-- Coding Profile Section -->
+  <section id="coding-profile" class="py-16 sm:py-15 md:py-12 lg:py-10 px-4 sm:px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <div
+          class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+          Coding Journey
+        </div>
+
+        <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          <span class="block text-slate-100">Coding</span>
+          <span class="block animated-gradient">Profile</span>
+        </h2>
+
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          My progress on competitive coding platforms and problem-solving journey.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <!-- LeetCode Card -->
+        <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://leetcode.com/Sourav-Sarkar/" target="_blank"
+            class="hover:opacity-80 transition-opacity w-full h-full flex items-center">
+            <img src="https://leetcard.jacoblin.cool/Sourav-Sarkar?theme=dark&font=Arimo" alt="LeetCode Stats"
+              class="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full h-auto" />
+          </a>
+        </div>
+
+        <!-- GeeksforGeeks Card -->
+        <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="150">
+          <a href="https://www.geeksforgeeks.org/" target="_blank"
+            class="hover:opacity-80 transition-opacity w-full h-full flex items-center">
+            <img src="https://gfgstatscard.vercel.app/djsoursd2l?theme=dark" alt="GeeksforGeeks Stats"
+              class="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full h-auto" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Experience Section -->
   <div id="experience-section"></div>
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-20 bg-slate-800/50">
+  <!-- Education Section -->
+  <section id="education" class="py-16 sm:py-15 md:py-12 lg:py-10 px-4 sm:px-6 bg-slate-900">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold gradient-text text-center mb-12" data-aos="fade-up">
-        Certifications
-      </h2>
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div
+          class="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+          My Journey
+        </div>
+
+        <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          <span class="block text-slate-100">Educational</span>
+          <span class="block animated-gradient">Background</span>
+        </h2>
+
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          My academic achievements and learning milestones.
+        </p>
+      </div>
+
+      <!-- Flex container -->
+      <div class="flex flex-col md:flex-row items-start justify-between gap-10">
+
+        <!-- Timeline Content -->
+        <div class="w-full md:w-2/3 space-y-10">
+          <!-- College -->
+          <div class="timeline-item" data-aos="fade-right">
+            <h3 class="text-xl font-bold text-emerald-400">B.Tech in Computer Science and Engineering</h3>
+            <p class="text-slate-400">Hooghly Engineering and Technology College, MAKAUT University</p>
+            <p class="text-slate-400 text-white">2022 - 2026</p>
+            <p class="text-slate-400">Current Year: 4th Year (8th Semester)</p>
+          </div>
+          <!-- Higher Secondary -->
+          <div class="timeline-item" data-aos="fade-left">
+            <h3 class="text-xl font-bold text-emerald-400">Higher Secondary (WBCHSE Broard)</h3>
+            <p class="text-slate-400">Naihati Mahendra High School</p>
+            <p class="text-slate-400 text-white">2022</p>
+            <p class="text-slate-400">Percentage: 90%</p>
+          </div>
+          <!-- Secondary -->
+          <div class="timeline-item" data-aos="fade-right">
+            <h3 class="text-xl font-bold text-emerald-400">Secondary (WBBSE Broard)</h3>
+            <p class="text-slate-400">Naihati Mahendra High School</p>
+            <p class="text-slate-400 text-white">2020</p>
+            <p class="text-slate-400">Percentage: 92%</p>
+          </div>
+        </div>
+
+        <!-- Right-side PNG Image -->
+        <div class="w-full md:w-1/3 flex justify-center md:justify-end self-center" data-aos="fade-left">
+          <img src="./assets/growth_map.svg" alt="Education Illustration"
+            class="rounded-xl w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[400px] lg:mr-10 xl:max-w-[520px]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-16 sm:py-15 md:py-12 lg:py-10 px-4 sm:px-6 bg-slate-800/50">
+    <div class="container mx-auto px-6">
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+
+        <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          <span class="block text-slate-100">Professional</span>
+          <span class="block animated-gradient">Certifications</span>
+        </h2>
+
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          Industry-recognized certifications that validate my expertise and skills.
+        </p>
+      </div>
       <div id="certificates-container"
         class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
         <!-- JS will inject certificate cards here -->
@@ -643,8 +934,7 @@
           </a>
 
           <!-- GitHub -->
-          <a href="https://github.com/Sourav-Sarkar-Official" target="_blank"
-            class="text-slate-400 hover:text-red-500">
+          <a href="https://github.com/Sourav-Sarkar-Official" target="_blank" class="text-slate-400 hover:text-red-500">
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd"
                 d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.089 2.91.833.091-.647.349-1.086.635-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 7.07c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.027 2.747-1.027.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.937.359.309.678.92.678 1.852 0 1.335-.012 2.415-.012 2.741 0 .267.18.577.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
@@ -661,10 +951,11 @@
         </div>
       </div>
       <div class="mt-8 text-center text-slate-400">
-        <p>© 2025 Sourav Sarkar. All rights reserved</p>
+        <p>© 2026 Sourav Sarkar. All rights reserved</p>
       </div>
     </div>
   </footer>
+
   <script src="skills.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -737,49 +1028,13 @@
       sliderTrack.style.animationPlayState = "running";
     });
   </script>
-  <!-- Scroll Popup JS -->
-  <script>
-    function hideEducationPopup() {
-      const popup = document.getElementById("education-popup");
-      popup.classList.add("opacity-0");
-      setTimeout(() => popup.classList.add("hidden"), 700); // Wait for fade-out transition
-    }
 
-    let popupShown = false;
-    window.addEventListener("scroll", () => {
-      const scrollTrigger = 1000; // Pixels scrolled before showing
-      const popup = document.getElementById("education-popup");
-
-      if (!popupShown && window.scrollY > scrollTrigger) {
-        popupShown = true;
-
-        // Show popup with fade-in
-        popup.classList.remove("hidden");
-        requestAnimationFrame(() => popup.classList.add("opacity-100"));
-
-        // Auto hide after 5 seconds
-        setTimeout(() => {
-          popup.classList.remove("opacity-100"); // Fade out
-          setTimeout(() => popup.classList.add("hidden"), 700); // Fully hide after transition
-        }, 5000);
-      }
-    });
-  </script>
 
   <!-- Experience JS file -->
   <script src="experience.js"></script>
 
 
-  <!-- Popup HTML  -->
-  <div id="education-popup"
-    class="hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-slate-800 text-white border border-emerald-500 px-6 py-4 rounded-xl shadow-lg flex items-center gap-4">
-    <i class="fas fa-user-graduate text-2xl text-emerald-400"></i>
-    <span>Want to see my educational journey?</span>
-    <a href="education.html"
-      class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition">Explore</a>
-    <button onclick="document.getElementById('education-popup').style.display='none'"
-      class="ml-2 text-slate-300 hover:text-red-400">&times;</button>
-  </div>
+
 </body>
 
 </html>
