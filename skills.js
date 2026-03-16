@@ -80,7 +80,7 @@ function renderSkills() {
       <div class="p-6 rounded-xl backdrop-blur-lg shadow-lg"
         style="background: linear-gradient(135deg, rgba(0, 255, 119, 0.46) 0%, rgba(0, 119, 255, 0.51) 100%); border: 1px solid rgba(255,255,255,0.15);"
         data-aos="fade-up">
-        <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Frameworks</h4>
+        <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Frameworks & Libraries</h4>
         <div class="grid grid-cols-1 gap-4">
           ${frameworks.map(createSkillCard).join('')}
         </div>
@@ -88,7 +88,7 @@ function renderSkills() {
       <div class="p-6 rounded-xl backdrop-blur-lg shadow-lg"
         style="background: linear-gradient(135deg,rgb(145, 25, 4),rgb(114, 27, 15));  border: 1px solid rgba(28, 133, 7, 0.18);"
         data-aos="fade-left">
-        <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Tools</h4>
+        <h4 class="text-xl font-bold mb-6 text-emerald-300 text-center">Tools & Databases</h4>
         <div class="grid grid-cols-1 gap-4">
           ${tools.map(createSkillCard).join('')}
         </div>
